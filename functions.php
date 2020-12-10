@@ -1,4 +1,10 @@
 <?php
+    /*
+    *   create user if not exist
+    *   hide admin bar for specific user
+    */
+    include 'include/create-user.php';
+
 
 	add_action( 'wp_enqueue_scripts', 'tt_child_enqueue_parent_styles' );
 
