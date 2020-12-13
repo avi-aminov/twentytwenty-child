@@ -63,17 +63,15 @@ get_header();
             <div class="col-md-12">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_field("cf_product_video");?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+        </div>
     </div>
-
-</div>
-
 <div>
+
 <h2 class="released-product-center"> <?php echo _e( 'Released Product', 'default' ); ?> </h2>
 <?php
     wp_reset_postdata(); 
 
     $cat_id = get_the_category()[0]->term_id;
-
     $args = array(
         'posts_per_page' => 4,
         'post__not_in' => array(get_the_ID()),
@@ -120,9 +118,6 @@ get_header();
         }
     }
     wp_reset_postdata(); 
-
-
-    echo do_shortcode('[test_shortcodes]');
 ?>
 </div>
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
