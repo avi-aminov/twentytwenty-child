@@ -10,3 +10,65 @@ Text Domain: twentytwenty-child
 */ 
 
 
+.price{
+    font-size: 18px;
+}
+
+.on-sale{
+    display: none;
+    background: red;
+    color: #fff;
+    position: absolute;
+    padding: 4px;
+    z-index: 1;
+}
+
+.sale .on-sale{
+    display: block;
+}
+
+.old-price{
+    display: none;
+    padding-right: 10px;
+    text-decoration: line-through;
+}
+
+.sale .old-price{
+  display: inline;
+}
+
+.btn{
+    font-size: 16px;
+}
+
+.btn-single{
+    display: block;
+    margin: 10px 0px 10px 0px;
+}
+
+h2.title{
+    margin-top: 15px;
+}
+
+.produuct-text p{
+    font-size: 13px;
+    padding: 10px 0px 10px 0px;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    background: #d2d2d2;
+    width: 20px;
+}
+
+h2.released-product-center{
+    text-align: center;
+    font-size: 30px;
+    margin: 50px 0px 50px 0px;
+}
+
+@media (max-width: 768px){
+    .flex-md-row {
+        flex-direction: column-reverse!important;
+    }
+}
