@@ -25,6 +25,11 @@
     */
     include 'include/custom_fillter_and_hook.php';
 
+    /*
+    *  json-api 
+    */
+    include 'include/json-api.php';
+
 
 	add_action( 'wp_enqueue_scripts', 'child_enqueue_parent_styles' );
 
@@ -73,8 +78,3 @@
         }
          return $result;      
     }
-
-    // add filter for shortcode use in widget
-    add_filter('widget_text', 'do_shortcode');
-    
-?>

@@ -1,7 +1,6 @@
 <?php
 
 add_shortcode('product', 'product_query');
-
 function product_query($atts, $content){
 
     extract(shortcode_atts(array(
@@ -17,7 +16,6 @@ function product_query($atts, $content){
         'p' => $atts['id']
     );
 
-
     if(isset($atts['id']) && $atts['id']){
         $args['p'] = $atts['id'];
     }else {
@@ -25,9 +23,6 @@ function product_query($atts, $content){
     }
 
     global $post;
-
-    
-
     $loop = new WP_Query( $args ); 
     $output = '';
 
@@ -85,3 +80,7 @@ HEREDOC;
     wp_reset_query();
     return html_entity_decode($output);
 }
+
+
+// add filter for shortcode use in widget
+add_filter('widget_text', 'do_shortcode');
