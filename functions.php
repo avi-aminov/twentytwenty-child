@@ -16,6 +16,13 @@
     include 'include/products_metaboxes.php';
 
 
+    /*
+    *  Add Shortcode display product by id
+    */
+    include 'include/product_shortcode.php';
+
+
+
 	add_action( 'wp_enqueue_scripts', 'child_enqueue_parent_styles' );
 
 	function child_enqueue_parent_styles() {
@@ -60,5 +67,6 @@
          return $result;      
     }
 
-
+    // add filter for shortcode use in widget
+    add_filter('widget_text', 'do_shortcode');
 ?>

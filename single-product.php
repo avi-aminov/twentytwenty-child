@@ -120,6 +120,9 @@ get_header();
         }
     }
     wp_reset_postdata(); 
+
+
+    echo do_shortcode('[test_shortcodes]');
 ?>
 </div>
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
