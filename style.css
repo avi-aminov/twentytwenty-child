@@ -67,6 +67,22 @@ h2.released-product-center{
     margin: 50px 0px 50px 0px;
 }
 
+.widget .on-sale {
+    background: black;
+    font-size: 14px;
+}
+
+body .footer-widgets a{
+    color: #fff;
+}
+
+.mobile-address-bar{
+    background: gray;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+}
+
 @media (max-width: 768px){
     .flex-md-row {
         flex-direction: column-reverse!important;
